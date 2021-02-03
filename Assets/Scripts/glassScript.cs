@@ -15,6 +15,7 @@ public class glassScript : MonoBehaviour
     private bool isEmpty = true;
     private bool isHalf = false;
     private bool isFull = false;
+    public int currentBeer;
 
     void Start()
     {
@@ -59,12 +60,33 @@ public class glassScript : MonoBehaviour
             MainSpriteRenderer.sprite = half;
             isEmpty = false;
             isHalf = true;
+
+            var objectName = other.gameObject.name;
+            if (objectName == "4") {
+            currentBeer = 0;
+            } 
+            else if (objectName == "2") {
+            currentBeer = 1;
+            }
+            else if (objectName == "3") {
+            currentBeer = 2;
+            } 
+            else if (objectName == "5") {
+            currentBeer = 3;
+            }
+            else if (objectName == "6") {
+            currentBeer = 4;
+            }
+            else if (objectName == "1") {
+            currentBeer = 5;
+            }
+            
         }
         
         if (isFull)
         {
            Debug.Log(other.gameObject.name);
-            if (other.gameObject.name == "customer1(Clone)")
+            if (other.gameObject.name.Contains("customer"))
             {
                 Destroy(gameObject);
             }

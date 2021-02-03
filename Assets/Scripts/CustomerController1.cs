@@ -10,7 +10,13 @@ public class CustomerController1 : MonoBehaviour
     float span = 3.0f;
     float delta = 0;
     GameObject[] realOrders;
-    bool isOrderFinished = false;
+    bool isOrderFinished = false; 
+    public int currentOrder;
+    public GameObject circle;
+    private GameObject order;
+    float judgeSpan = 1.0f;
+    float judgeDelta = 0;
+    bool isJudge = false;
     void Start()
     {
        realOrders = new GameObject[6];
@@ -32,12 +38,29 @@ public class CustomerController1 : MonoBehaviour
           this.delta += Time.deltaTime;
           if (!isOrderFinished && this.delta > span) 
           {
-          GameObject order = Instantiate(orders[Random.Range(0, orders.Length)]) as GameObject;　//プレハブをランダムに生成する
-          Vector2 customer1 = transform.position; //客の位置を取得する
-          order.transform.position = new Vector3(transform.position.x + 2.2f, transform.position.y, transform.position.z); //生成したプレハブを客の隣に配置する
-          isOrderFinished = true;
+            currentOrder = Random.Range(0, orders.Length);
+            order = Instantiate(orders[currentOrder]) as GameObject;　//プレハブをランダムに生成する
+            Vector2 customer1 = transform.position; //客の位置を取得する
+            order.transform.position = new Vector3(transform.position.x + 2.2f, transform.position.y, transform.position.z); //生成したプレハブを客の隣に配置する
+            isOrderFinished = true;
           }
+      }  
+      if (isJudge)
+      {
+        this.judgeDelta += Time.deltaTime;
+        if (this.judgeDelta > this.judgeSpan)
+        Destroy(this.gameObject);
       }
-      
     }
-}
+    void OnTriggerEnter2D(Collider2D other)
+    {
+      if (currentOrder == other.gameObject.GetComponent<glassScript>().currentBeer)
+      {
+        GameObject judge = Instantiate(circle) as GameObject;
+        Vector2 customer1 = transform.position; //客の位置を取得する
+        judge.transform.position = new Vector3(transform.position.x + 2.2f, transform.position.y, transform.position.z);
+        Destroy(order);
+        isJudge = true;
+      }
+    }
+}  
