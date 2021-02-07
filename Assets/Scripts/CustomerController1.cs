@@ -12,8 +12,9 @@ public class CustomerController1 : MonoBehaviour
     GameObject[] realOrders;
     bool isOrderFinished = false; 
     public int currentOrder;
-    public GameObject circle;
-    private GameObject order;
+    GameObject currentOrderImage;
+
+    public GameObject circle; //丸判定
     float judgeSpan = 1.0f;
     float judgeDelta = 0;
     bool isJudge = false;
@@ -29,19 +30,20 @@ public class CustomerController1 : MonoBehaviour
       if (this.delta > this.span)
       {
           List<int> checkCustomers = new List<int>();　//Listの宣言
-          for (var i = 0; i < realOrders.Length; ++i) {　
+          for (var i = 0; i < realOrders.Length; ++i) 
+            {　
              if (realOrders[i] == null) 
               checkCustomers.Add(i);
             }        
-      }    
-          {
+      }  
+      {
           this.delta += Time.deltaTime;
           if (!isOrderFinished && this.delta > span) 
           {
             currentOrder = Random.Range(0, orders.Length);
-            order = Instantiate(orders[currentOrder]) as GameObject;　//プレハブをランダムに生成する
+            currentOrderImage = Instantiate(orders[currentOrder]) as GameObject;　//プレハブをランダムに生成する
             Vector2 customer1 = transform.position; //客の位置を取得する
-            order.transform.position = new Vector3(transform.position.x + 2.2f, transform.position.y, transform.position.z); //生成したプレハブを客の隣に配置する
+            currentOrderImage.transform.position = new Vector3(transform.position.x + 2.2f, transform.position.y, transform.position.z); //生成したプレハブを客の隣に配置する
             isOrderFinished = true;
           }
       }  
@@ -54,13 +56,13 @@ public class CustomerController1 : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-      if (currentOrder == other.gameObject.GetComponent<glassScript>().currentBeer)
+      //if (currentOrder == other.gameObject.GetComponent<glassScript>().currentBeer)
       {
-        GameObject judge = Instantiate(circle) as GameObject;
-        Vector2 customer1 = transform.position; //客の位置を取得する
-        judge.transform.position = new Vector3(transform.position.x + 2.2f, transform.position.y, transform.position.z);
-        Destroy(order);
-        isJudge = true;
+        //GameObject judge = Instantiate(circle) as GameObject;
+        //Vector2 customer1 = transform.position; //客の位置を取得する
+        //judge.transform.position = new Vector3(transform.position.x + 2.2f, transform.position.y, transform.position.z);
+        //Destroy(currentOrderImage);
+        //isJudge = true;
       }
     }
 }  

@@ -32,6 +32,9 @@ public class CustomerGenerator : MonoBehaviour
           this.delta = 0;
           realCustomers[tableNo].transform.position = new Vector3(tableNo * 5.0f - 6.5f, -3.4f, 0);
         }
+        else {
+          this.delta = 0; //deltaを0に戻す
+        }
       }
     }
 }

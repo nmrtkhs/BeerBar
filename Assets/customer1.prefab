@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4653301329858380387}
   - component: {fileID: 7340641415508183677}
-  - component: {fileID: -6080060091438573394}
   - component: {fileID: 1244571378377962359}
+  - component: {fileID: -7979100223888553821}
   m_Layer: 0
   m_Name: customer1
   m_TagString: Untagged
@@ -84,28 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-6080060091438573394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5251862465816723081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aa179c5332e74d2aaf06311ef413e80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  orders:
-  - {fileID: 5290582603438845811, guid: 8d2a1375734324b84ba807731ecdedf6, type: 3}
-  - {fileID: 9107485177661039766, guid: b6141261e1bab47919392dee5acde2b5, type: 3}
-  - {fileID: 8454904537133152056, guid: e3e4f0cb08f924608b0ec6cfb10b05dc, type: 3}
-  - {fileID: 827963427584415912, guid: ae19363a971334a6fa69bd9a564cdd53, type: 3}
-  - {fileID: 8763082078735631234, guid: e4db3645ffb514b81934cceac55e6de3, type: 3}
-  - {fileID: 920764274298785172, guid: 9e13e4d38df774196a9701e15ff8ce7e, type: 3}
-  customer1: {fileID: 0}
-  currentOrder: 0
-  circle: {fileID: 4855667264147179946, guid: abf632155f0a14e4c8bb58b8ca565fcb, type: 3}
 --- !u!61 &1244571378377962359
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -130,5 +108,27 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 12.04, y: 16.73}
+  m_Size: {x: 8, y: 8}
   m_EdgeRadius: 0
+--- !u!114 &-7979100223888553821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5251862465816723081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e026dcef18cb54f45a0dbb37c2889ff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orders:
+  - {fileID: 920764274298785172, guid: 9e13e4d38df774196a9701e15ff8ce7e, type: 3}
+  - {fileID: 9107485177661039766, guid: b6141261e1bab47919392dee5acde2b5, type: 3}
+  - {fileID: 8454904537133152056, guid: e3e4f0cb08f924608b0ec6cfb10b05dc, type: 3}
+  - {fileID: 5290582603438845811, guid: 8d2a1375734324b84ba807731ecdedf6, type: 3}
+  - {fileID: 827963427584415912, guid: ae19363a971334a6fa69bd9a564cdd53, type: 3}
+  - {fileID: 8763082078735631234, guid: e4db3645ffb514b81934cceac55e6de3, type: 3}
+  customer1: {fileID: 0}
+  currentOrder: 0
+  circle: {fileID: 4855667264147179946, guid: abf632155f0a14e4c8bb58b8ca565fcb, type: 3}
