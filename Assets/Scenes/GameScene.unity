@@ -223,7 +223,7 @@ MonoBehaviour:
   half: {fileID: 21300000, guid: 9a7a2ecb2e8254662af37a4fa9ef1281, type: 3}
   full: {fileID: 21300000, guid: 0e7f4dfca83b645e59bd488256e88e4f, type: 3}
   defaultSprite: {fileID: 0}
-  BeerType: 0
+  BeerType: 4
 --- !u!61 &123223924
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -553,7 +553,7 @@ MonoBehaviour:
   half: {fileID: 21300000, guid: 762f085687d2246129023ccc8960131d, type: 3}
   full: {fileID: 21300000, guid: 0c9e462308fe84117855f7b6c9668e0c, type: 3}
   defaultSprite: {fileID: 0}
-  BeerType: 0
+  BeerType: 3
 --- !u!61 &312285939
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -767,7 +767,7 @@ MonoBehaviour:
   half: {fileID: 21300000, guid: 2a0e181a402cf4858b578661d4ddcf4c, type: 3}
   full: {fileID: 21300000, guid: d397a709332af48cc8bfcd165239c9b8, type: 3}
   defaultSprite: {fileID: 0}
-  BeerType: 0
+  BeerType: 5
 --- !u!61 &496853911
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1216,7 +1216,7 @@ MonoBehaviour:
   half: {fileID: 21300000, guid: bcc29a073bd704c54be06da5aac5054f, type: 3}
   full: {fileID: 21300000, guid: 8b292e85a9474480a90e382a45e55ff0, type: 3}
   defaultSprite: {fileID: 0}
-  BeerType: 0
+  BeerType: 1
 --- !u!61 &967264151
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2131,7 +2131,7 @@ MonoBehaviour:
   half: {fileID: 21300000, guid: 27555f4e71b1f4bde857916b550de8cd, type: 3}
   full: {fileID: 21300000, guid: 8debfdeaa4ede4581ad2822aeb2e613d, type: 3}
   defaultSprite: {fileID: 0}
-  BeerType: 0
+  BeerType: 6
 --- !u!61 &1806819495
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2470,7 +2470,7 @@ MonoBehaviour:
   half: {fileID: 21300000, guid: ff30a7925ee264a7f831a605f20534f4, type: 3}
   full: {fileID: 21300000, guid: 9aa1c0afb64b94925ba1a5e7388249e5, type: 3}
   defaultSprite: {fileID: 0}
-  BeerType: 0
+  BeerType: 2
 --- !u!61 &1948934099
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -17,13 +17,13 @@ public class glassScript : MonoBehaviour
     private bool isHalf = false;
     private bool isFull = false;
     [SerializeField] //インスペクターウィンドウで編集できるようにする
-    private int BeerType;
+    public int BeerType;
     private Vector3 defaultPos; //グラスの最初の位置
     float resetTime = 0f;
     const float resetLimit = 1.0f;　//const：定数を与える。プログラム処理中に変更しないため
     bool isReset = false;
     private GameDirector gameDirector; //スコアを表示する
-    // public int currentBeer;
+    //public GameObject doubleCircle;
 
     void Start()
     {
@@ -142,13 +142,13 @@ public class glassScript : MonoBehaviour
         
         if (isFull)
         {
-            var go = other.gameObject; //var?
+            var go = other.gameObject; 
             if (other.gameObject.name.Contains("customer"))
             {
                  if (go.GetComponent<CustomerController1>().currentOrder + 1 == BeerType)//客の注文と合っているか確認
                 {
-                    // 正解
-                    gameDirector.ScoreUp();
+                    go.GetComponent<CustomerController1>().displayResult(true);
+                    gameDirector.ScoreUp();// 正解
                 }
                 else
                 {

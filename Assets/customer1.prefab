@@ -129,6 +129,10 @@ MonoBehaviour:
   - {fileID: 5290582603438845811, guid: 8d2a1375734324b84ba807731ecdedf6, type: 3}
   - {fileID: 827963427584415912, guid: ae19363a971334a6fa69bd9a564cdd53, type: 3}
   - {fileID: 8763082078735631234, guid: e4db3645ffb514b81934cceac55e6de3, type: 3}
-  customer1: {fileID: 0}
+  customer: {fileID: 0}
   currentOrder: 0
-  circle: {fileID: 4855667264147179946, guid: abf632155f0a14e4c8bb58b8ca565fcb, type: 3}
+  judgments: []
+  realJudgments:
+  - {fileID: 4855667264147179946, guid: abf632155f0a14e4c8bb58b8ca565fcb, type: 3}
+  - {fileID: 3817310445804525809, guid: 8a0b95bd5f3d64a7aade08b940579118, type: 3}
+  - {fileID: 4165678253174874069, guid: 5816a35ca093045818cbf7991f8e751d, type: 3}
