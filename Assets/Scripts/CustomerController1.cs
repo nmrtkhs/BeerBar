@@ -13,7 +13,7 @@ public class CustomerController1 : MonoBehaviour
     bool isOrderFinished = false; 
     public int currentOrder;
     GameObject currentOrderImage;
-    float judgeSpan = 1.0f;
+    float judgeSpan = 2.0f;
     float judgeDelta = 0;
     bool isJudge = false;
     bool isSuccess;
@@ -22,7 +22,6 @@ public class CustomerController1 : MonoBehaviour
     void Start()
     {
        realOrders = new GameObject[6];
-       judgments = new GameObject[3];
     }
 
     // Update is called once per frame

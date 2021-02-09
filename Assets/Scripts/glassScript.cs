@@ -23,7 +23,6 @@ public class glassScript : MonoBehaviour
     const float resetLimit = 1.0f;　//const：定数を与える。プログラム処理中に変更しないため
     bool isReset = false;
     private GameDirector gameDirector; //スコアを表示する
-    //public GameObject doubleCircle;
 
     void Start()
     {
