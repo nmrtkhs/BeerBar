@@ -19,9 +19,9 @@ public class GameDirector : MonoBehaviour
         
     }
 
-    public void ScoreUp()
+    public void ScoreUp(int successLevel)
     {
-        score++;
+        score += successLevel;
         scoreText.text = "Score : " + score.ToString(); //得点を表示させる
     }
 

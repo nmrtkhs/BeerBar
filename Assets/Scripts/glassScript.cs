@@ -146,8 +146,23 @@ public class glassScript : MonoBehaviour
             {
                  if (go.GetComponent<CustomerController1>().currentOrder + 1 == BeerType)//客の注文と合っているか確認
                 {
-                    go.GetComponent<CustomerController1>().displayResult(true);
-                    gameDirector.ScoreUp();// 正解
+                    
+                    float orderTime = go.GetComponent<CustomerController1>().ordetTime;
+                    int successLevel = 0;
+                    if (orderTime < 7)
+                    {
+                        successLevel = 3;
+                    }
+                    else if (orderTime < 10)
+                    {
+                        successLevel = 2;
+                    }
+                    else {
+                        successLevel = 1;
+                    }
+                    gameDirector.ScoreUp(successLevel);// 正解
+                    go.GetComponent<CustomerController1>().displayResult(true, successLevel);
+
                 }
                 else
                 {
